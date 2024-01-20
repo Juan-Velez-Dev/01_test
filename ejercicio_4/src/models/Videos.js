@@ -33,25 +33,29 @@ const Videos = sequelize.define('videos', {
 
 // Relaciones para Videos
 
-Videos.belongsToMany(Collaborators, {
-  through: 'collaborators_video'
+Videos.hasMany(Collaborators, {
+  foreignKey: 'colaboratorsId',
+  sourceKey: 'id'
 })
 
-Videos.belongsToMany(Users, {
-  through: 'users_video'
+Videos.hasMany(Comments, {
+  primaryKey: 'commentsId',
+  sourceKey: 'id'
 })
 
-Videos.belongsToMany(Comments, {
-  through: 'comments_video'
+Videos.hasMany(Reviews, {
+  primaryKey: 'reviewsId',
+  sourceKey: 'id'
 })
 
-Videos.belongsToMany(Reviews, {
-  through: 'reviews_video'
-})
-
-Videos.belongsTo(Authors, {
+Videos.hasOne(Authors, {
   foreignKey: 'authorId',
+  sourceKey: 'id'
 })
 
+Videos.belongsTo(Users, {
+  foreignKey: 'authorId',
+  sourceKey: 'id'
+})
 
 module.exports = Videos;

@@ -1,6 +1,6 @@
 const { sequelize } = require('../db/postgreSQL.js');
 const { DataTypes } = require('sequelize');
-const Reviews = require('./Reviews.js')
+const Videos = require('./Videos.js')
 
 const Users = sequelize.define('users', {
   id: {
@@ -25,9 +25,5 @@ const Users = sequelize.define('users', {
   }
 });
 
-Users.hasMany(Reviews, {
-  foreignKey: 'userId',
-  sourceKey: 'id'
-})
 
 module.exports = Users;
