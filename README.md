@@ -1,6 +1,6 @@
 # Prueba tecnica 01
 
-### Nota: Las respuestas de los ejercicios estaran guardadas en carpetas con el numero del ejercicio. Ejemplo en la carpeta ( ejercici_1 ) Estara la respuesta del ejercicio.
+### Nota: Las respuestas de los ejercicios estaran guardadas en carpetas con el numero del ejercicio. Ejemplo en la carpeta ( ejercicio_1 ) Estara la respuesta del ejercicio.
 
 Objetivo : Evaluar habilidades de Backend
 
